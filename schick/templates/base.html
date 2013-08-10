@@ -1,0 +1,102 @@
+{% load cms_tags %}
+<html>
+  <head>
+      <!-- FONTS -->
+      <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+
+      <!-- STYLES -->
+      <link rel="stylesheet" type="text/css" href="https://dl.dropboxusercontent.com/u/24686053/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/schick-static/bootstrap-responsive.css" />
+      <!--link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/schick-static/bootstrapserif.min.css" /-->
+      <script type="text/javascript" src="https://s3.amazonaws.com/schick-static/jquery-1.9.1.min.js"></script>
+      <script type="text/javascript" src="https://s3.amazonaws.com/schick-static/bootstrap.min.js"></script>
+      <!--script type="text/javascript" src="https://dl.dropboxusercontent.com/u/24686053/bootstrap-collapse.js"></script-->
+      
+
+  <style>
+
+  body {
+    margin: 5px;
+  }
+
+  .site-title {
+    color: #000;
+    margin-top: 5px;
+    font-family: 'Fjalla One', sans-serif;
+    text-shadow: 2px 2px 1px #ddd;
+    font-size:28pt;
+    font-weight: 200;
+  }
+
+  p {
+    font-size: 14pt;
+    line-height: 18pt;
+  }
+
+  
+  </style>
+  </head>
+  <body>
+{% cms_toolbar %}
+
+{% block title %}
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+ 
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+ 
+      <!-- Be sure to leave the brand out there if you want it shown -->
+        <ul class="nav">
+        <li><a class="site-title" href="/">ANTHONY SCHICK</a></li>
+        </ul>     
+        <ul class="nav">
+          <li><a href="http://twitter.com/tonyvschick" target="_blank"><img src="https://dl.dropboxusercontent.com/u/24686053/twitter.svg" height="30" width="30"/> </a></li>
+          <li><a href="https://www.facebook.com/schick.anthony" ><img src="https://dl.dropboxusercontent.com/u/24686053/facebook.svg" height="30" width="30"/> </a></li>
+          <li><a href="http://www.linkedin.com/pub/anthony-schick/1a/1b/278" ><img src="https://dl.dropboxusercontent.com/u/24686053/linkedin.svg" height="30" width="30"/> </a></li>
+          <li><a href="https://plus.google.com/107700006048586638107/posts" ><img src="https://dl.dropboxusercontent.com/u/24686053/googleplus.svg" height="30" width="30"/> </a></li>
+          <li><a href="https://github.com/tonyschick" ><img src="https://dl.dropboxusercontent.com/u/24686053/github.svg" height="30" width="30"/> </a></li>
+        </ul>
+
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse" id="collapse">
+          <ul class="nav">
+          <li><a href="/about/">about</a></li>
+          <li><a href="/blog/dispatches/">blog</a></li>
+          <li><a href="/projects/">projects</a></li>
+          <li><a href="/work/">past work</a></li>
+        </ul>
+        <!-- .nav, .navbar-search, .navbar-form, etc -->
+      </div>
+
+<script>
+    $('#collapse').collapse()
+</script> 
+ 
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block body %}
+
+<div style="margin-top: 40px; padding-top: 40px;" class="row-fluid">
+  <div class="span3 offset1">
+  </div>
+  <div class="span8">
+      {% placeholder base_content %}
+</div>
+{% endblock %}
+
+  </body>
+</html>

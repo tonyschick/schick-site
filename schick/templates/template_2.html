@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+
+{% block sidebar %}
+{% endblock %}
+
+{% block body %}
+	<div class="row-fluid" style="margin-top: 40px; padding: 40px;">
+		<div class="span10 offset1">
+	{% placeholder main_content %}
+		</div>
+	</div>
+
+{% endblock %}
