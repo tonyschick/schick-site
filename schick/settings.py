@@ -16,8 +16,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
 
 DATABASES = {
     'default': {
@@ -28,6 +26,10 @@ DATABASES = {
 '''
 for Heroku configuration
 '''
+
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
+
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
