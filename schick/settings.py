@@ -7,7 +7,7 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
 
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -23,6 +23,7 @@ DATABASES = {
     }
 }
 
+SOUTH_DATABASE_ADAPTERS = {'default':'south.db.postgresql_psycopg2'}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
